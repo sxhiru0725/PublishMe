@@ -32,11 +32,11 @@ async function downloadPDF() {
       doc.setFillColor(26, 86, 219);
       doc.rect(0, 0, pageW, 10, 'F');
       doc.setFontSize(7); doc.setTextColor(255, 255, 255);
-      doc.text('AI Social Media Report Generator — Kingston University London', margin, 6.5);
+      doc.text('PublishMe', margin, 6.5);
       doc.text(`Page ${pg}`, pageW - margin, 6.5, { align: 'right' });
       // Footer
       doc.setFontSize(7); doc.setTextColor(150, 150, 150);
-      doc.text('Kushani Maleesha Wickramarathna | K2557717 | BSc Software Engineering', margin, pageH - 6);
+      doc.text('Made by Sahiru Imadith', margin, pageH - 6);
       doc.text(new Date().toLocaleDateString('en-GB'), pageW - margin, pageH - 6, { align: 'right' });
       doc.setTextColor(0, 0, 0);
     }
@@ -112,10 +112,9 @@ async function downloadPDF() {
     doc.setFontSize(10); doc.setFont('helvetica', 'normal');
     doc.text(rptDate, pageW / 2, 122, { align: 'center' });
 
-    // Uni details
+    // Credit
     doc.setFontSize(9); doc.setTextColor(107, 114, 128);
-    doc.text('Kingston University London — BSc Software Engineering', pageW / 2, 260, { align: 'center' });
-    doc.text('Supervised by Ms. Virajini Godapitiya', pageW / 2, 267, { align: 'center' });
+    doc.text('Made by Sahiru Imadith', pageW / 2, 260, { align: 'center' });
 
     addHeaderFooter();
 
@@ -296,7 +295,7 @@ async function downloadPDF() {
     }
 
     // ── SAVE ──────────────────────────────────────────────────────────────────
-    const filename = `SM_Report_${bizName.replace(/[^a-z0-9]/gi, '_')}_${new Date().toISOString().slice(0,10)}.pdf`;
+    const filename = `PublishMe_Report_${bizName.replace(/[^a-z0-9]/gi, '_')}_${new Date().toISOString().slice(0,10)}.pdf`;
     doc.save(filename);
 
     showToast('PDF downloaded successfully!', 'success');
