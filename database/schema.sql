@@ -1,6 +1,6 @@
--- AI-Based Social Media Report Generator
+-- PublishMe
 -- Database Schema
--- Student: Kushani Maleesha Wickramarathna | K2557717
+-- Made by Sahiru Imadith
 
 CREATE DATABASE IF NOT EXISTS smreport_db CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 USE smreport_db;

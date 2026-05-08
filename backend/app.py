@@ -46,14 +46,13 @@ def static_files(path):
 # ── Health check ───────────────────────────────────────────────────────────
 @app.route("/api/health")
 def health():
-    return {"status": "ok", "message": "SM Report Generator API running"}, 200
+    return {"status": "ok", "message": "PublishMe API running"}, 200
 
 
 if __name__ == "__main__":
     print("=" * 60)
-    print("  AI Social Media Report Generator")
-    print("  BSc Software Engineering — Kingston University")
-    print("  Student: Kushani Maleesha Wickramarathna | K2557717")
+    print("  PublishMe")
+    print("  Made by Sahiru Imadith")
     print(f"  Running at: http://localhost:{Config.PORT}")
     print("=" * 60)
     app.run(host=Config.HOST, port=Config.PORT, debug=Config.DEBUG)
